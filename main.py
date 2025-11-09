@@ -11,7 +11,7 @@ def fetch_trending_repos():
     return response.json()["items"]
 
 def analyze_with_gemini(description):
-    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=" + GEMINI_API_KEY
+    url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=" + GEMINI_API_KEY
     payload = {
         "contents": [{
             "parts": [{"text": f"Анализ коммерциализации проекта: {description}"}]
